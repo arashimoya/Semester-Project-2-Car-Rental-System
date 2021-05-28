@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #23272a;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.views.ReservationView.ReservationViewController">
+   <right>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="addButton" contentDisplay="CENTER" minWidth="-Infinity" mnemonicParsing="false" onAction="#onAddButton" prefHeight="110.0" prefWidth="118.0" style="-fx-background-color: #23272a; -fx-border-color: #7289da;">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/plusviolet.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="deleteButton" contentDisplay="CENTER" layoutX="30.0" layoutY="30.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#deleteAction" prefHeight="110.0" prefWidth="118.0" style="-fx-background-color: #23272a; -fx-border-color: #7289da;">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/minusviolet.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="editButton" contentDisplay="CENTER" layoutX="30.0" layoutY="30.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#openEditView" prefHeight="110.0" prefWidth="118.0" style="-fx-background-color: #23272a; -fx-border-color: #7289da;">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="homeButton" contentDisplay="CENTER" layoutX="30.0" layoutY="30.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#home" prefHeight="110.0" prefWidth="118.0" style="-fx-background-color: #23272a; -fx-border-color: #7289da;">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/backicon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" stylesheets="@../icons/Style.css" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="idCol" minWidth="70.0" prefWidth="70.0" resizable="false" text="ID" />
+            <TableColumn fx:id="nameCol" maxWidth="427.0" prefWidth="58.333343505859375" text="Name" />
+            <TableColumn fx:id="surnameCol" maxWidth="417.0" minWidth="0.0" prefWidth="75.33332824707031" text="Surname" />
+            <TableColumn fx:id="driversLicenceCol" maxWidth="417.0" minWidth="0.0" prefWidth="75.33332824707031" text="Driver's License" />
+            <TableColumn fx:id="addressCol" maxWidth="417.0" minWidth="0.0" prefWidth="75.33332824707031" text="Address" />
+            <TableColumn fx:id="carCol" maxWidth="417.0" minWidth="0.0" prefWidth="75.33332824707031" text="Car" />
+            <TableColumn fx:id="startBranchCol" maxWidth="417.0" minWidth="0.0" prefWidth="75.33332824707031" text="Start Branch" />
+            <TableColumn fx:id="endBranchCol" maxWidth="417.0" minWidth="0.0" prefWidth="75.33332824707031" text="End Branch" />
+            <TableColumn fx:id="startDateCol" maxWidth="417.0" minWidth="0.0" prefWidth="75.33332824707031" text="Start Date" />
+            <TableColumn fx:id="endDateCol" maxWidth="417.0" minWidth="0.0" prefWidth="75.33332824707031" text="End Date" />
+            <TableColumn fx:id="priceCol" maxWidth="417.0" minWidth="0.0" prefWidth="75.33332824707031" text="Price" />
+            <TableColumn fx:id="emailCol" maxWidth="417.0" minWidth="0.0" prefWidth="75.33332824707031" text="E-mail" />
+            <TableColumn fx:id="phoneNumberCol" maxWidth="417.0" minWidth="0.0" prefWidth="75.33332824707031" text="Telephone nr" />
+         </columns>
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" top="20.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+   <top>
+      <AnchorPane prefHeight="86.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="82.0" fitWidth="209.0" layoutX="176.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/FullDatoLogin.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

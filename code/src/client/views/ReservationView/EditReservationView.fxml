@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="882.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.views.ReservationView.EditReservationViewController">
+   <children>
+      <AnchorPane prefHeight="105.0" prefWidth="500.0" style="-fx-background-color: #23272a;">
+         <children>
+            <ImageView fitHeight="83.0" fitWidth="199.0" layoutX="14.0" layoutY="11.0">
+               <image>
+                  <Image url="@../icons/FullDatoLogin.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="268.0" layoutY="30.0" text="Edit Reservation" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Text fill="#7289da" layoutX="163.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Street">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="nameTextField" layoutX="221.0" layoutY="169.0" prefHeight="25.0" prefWidth="187.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Text fill="#7289da" layoutX="179.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="surnameTextField" layoutX="221.0" layoutY="204.0" prefHeight="25.0" prefWidth="187.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button layoutX="76.0" layoutY="803.0" mnemonicParsing="false" onAction="#cancelAction" prefHeight="30.0" prefWidth="118.0" style="-fx-background-color: #7289da;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="315.0" layoutY="803.0" mnemonicParsing="false" onAction="#editAction" prefHeight="30.0" prefWidth="118.0" style="-fx-background-color: #7289da;" text="Edit" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Text fill="#7289da" layoutX="181.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zip" wrappingWidth="20.658203125">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#7289da" layoutX="152.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#7289da" layoutX="177.0" layoutY="451.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Car">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#7289da" layoutX="119.0" layoutY="495.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Branch">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#7289da" layoutX="132.0" layoutY="537.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Branch">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#7289da" layoutX="135.0" layoutY="582.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#7289da" layoutX="146.0" layoutY="624.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Date">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#7289da" layoutX="111.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Drivers License">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#7289da" layoutX="149.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surname">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#7289da" layoutX="169.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#7289da" layoutX="172.0" layoutY="663.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="driversLicenceTextField" layoutX="221.0" layoutY="240.0" prefHeight="25.0" prefWidth="187.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="streetTextField" layoutX="221.0" layoutY="275.0" prefHeight="25.0" prefWidth="187.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="cityTextField" layoutX="221.0" layoutY="314.0" prefHeight="25.0" prefWidth="187.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="zipTextField" layoutX="221.0" layoutY="352.0" prefHeight="25.0" prefWidth="187.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="countryTextField" layoutX="221.0" layoutY="394.0" prefHeight="30.0" prefWidth="187.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="phoneNumberTextField" layoutX="221.0" layoutY="643.0" prefHeight="30.0" prefWidth="187.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label fx:id="messageLabel" layoutX="113.0" layoutY="765.0" prefHeight="20.0" prefWidth="323.0" textFill="#7c0909">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Text fill="#7289da" layoutX="194.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="idText" layoutX="221.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="187.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="emailTextField" layoutX="221.0" layoutY="681.0" prefHeight="30.0" prefWidth="187.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Text fill="#7289da" layoutX="170.0" layoutY="701.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="priceTextField" layoutX="221.0" layoutY="716.0" prefHeight="30.0" prefWidth="187.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Text fill="#7289da" layoutX="111.0" layoutY="736.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone number">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="carComboBox" layoutX="222.0" layoutY="434.0" prefHeight="25.0" prefWidth="187.0" />
+      <ComboBox fx:id="startBranchComboBox" layoutX="222.0" layoutY="477.0" prefHeight="25.0" prefWidth="187.0" />
+      <ComboBox fx:id="endBranchComboBox" layoutX="222.0" layoutY="519.0" prefHeight="25.0" prefWidth="187.0" />
+      <DatePicker fx:id="startDateDatePicker" layoutX="221.0" layoutY="564.0" prefHeight="25.0" prefWidth="187.0" />
+      <DatePicker fx:id="endDateDatePicker" layoutX="221.0" layoutY="606.0" prefHeight="25.0" prefWidth="187.0" />
+      <Button layoutX="416.0" layoutY="643.0" mnemonicParsing="false" onAction="#calculateAction" prefHeight="30.0" prefWidth="67.0" style="-fx-background-color: #7289da;" text="Calc" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

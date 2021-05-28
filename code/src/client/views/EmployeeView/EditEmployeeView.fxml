@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="620.0" prefWidth="624.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.views.EmployeeView.EditEmployeeViewController">
+    <children>
+        <AnchorPane prefHeight="108.0" prefWidth="624.0" style="-fx-background-color: #23272a;">
+            <children>
+                <ImageView fitHeight="93.0" fitWidth="218.0" layoutX="7.0" layoutY="8.0">
+                    <image>
+                        <Image url="@../icons/FullDatoLogin.png" />
+                    </image>
+                </ImageView>
+            <Label layoutX="410.0" layoutY="32.0" text="Edit Employee" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+        <TextField fx:id="firstnameTextField" layoutX="198.0" layoutY="175.0" prefHeight="25.0" prefWidth="325.0" promptText="First Name">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+        <Button fx:id="registerButton" layoutX="194.0" layoutY="530.0" mnemonicParsing="false" onAction="#onEditAction" prefHeight="25.0" prefWidth="237.0" style="-fx-background-color: #7289da;" text="Edit" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+        <Label layoutX="83.0" layoutY="180.0" text="First Name" textFill="#7289da">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+        <Label layoutX="83.0" layoutY="220.0" text="Last Name" textFill="#7289da">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+        <TextField fx:id="lastnameTextField" layoutX="199.0" layoutY="215.0" prefHeight="25.0" prefWidth="325.0" promptText="Last Name">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+        <TextField fx:id="usernameTextField" layoutX="198.0" layoutY="335.0" prefHeight="25.0" prefWidth="325.0" promptText="Username">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+        <TextField fx:id="passwordTextField" layoutX="198.0" layoutY="375.0" prefHeight="25.0" prefWidth="325.0" promptText="Passwords">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+        <TextField fx:id="confirmPasswordTextField" layoutX="198.0" layoutY="415.0" prefHeight="25.0" prefWidth="325.0" promptText="Confirm Password">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+        <Label layoutX="85.0" layoutY="340.0" text="Username" textFill="#7289da">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+        <Label layoutX="87.0" layoutY="380.0" text="Password" textFill="#7289da">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+        <Label layoutX="53.0" layoutY="420.0" text="Confirm Password" textFill="#7289da">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+        <Label fx:id="registrationLabelMessage" layoutX="199.0" layoutY="495.0" prefHeight="20.0" prefWidth="326.0" textFill="#7c0909">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+        <Button fx:id="closeButton" layoutX="194.0" layoutY="568.0" mnemonicParsing="false" onAction="#closeOnAction" prefHeight="30.0" prefWidth="237.0" style="-fx-background-color: #7289da;" text="Close" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+        <Label layoutX="95.0" layoutY="257.0" text="Role" textFill="#7289da">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+        <Label layoutX="95.0" layoutY="300.0" text="Branch" textFill="#7289da">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+        <ComboBox fx:id="roleComboBox" layoutX="198.0" layoutY="255.0" prefHeight="30.0" prefWidth="151.0" />
+        <ComboBox fx:id="branchComboBox" layoutX="198.0" layoutY="295.0" prefHeight="30.0" prefWidth="151.0" />
+        <Label layoutX="99.0" layoutY="460.0" text="Email" textFill="#7289da">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+        <TextField fx:id="emailTextField" layoutX="198.0" layoutY="455.0" prefHeight="25.0" prefWidth="325.0" promptText="Email">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label layoutX="109.0" layoutY="140.0" text="ID" textFill="#7289da">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="idText" layoutX="198.0" layoutY="135.0" prefHeight="30.0" prefWidth="52.0" textFill="#7289da">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+    </children>
+</AnchorPane>

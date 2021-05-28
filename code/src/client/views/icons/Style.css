@@ -1,0 +1,87 @@
+/* Set the background */
+ .root{
+    -fx-background-color: #23272a;
+}
+
+/* Set the table-view */
+.table-view{
+   -fx-background-color: transparent;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: #7289da;
+    -fx-background-radius: 7px 7px 0px 0px;
+}
+
+/* Set the color of the upper columns */
+.table-view .column-header-background .label{
+    -fx-background-color: #7289da;
+    -fx-text-fill: #23272a;
+}
+
+/* Set the color of the entire upper columns */
+.table-view .column-header {
+    -fx-background-color: #7289da;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: #7289da;
+}
+
+/* Set the color of the inner lines inside the table view */
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #23272a;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+    -fx-border-color: #7289da;
+    -fx-table-cell-border-color: #7289da;
+}
+
+/* Set the style of the odd cells */
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #394045;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+    -fx-border-color: #7289da;
+    -fx-table-cell-border-color: #7289da;
+}
+
+/* Change the color when the cell is selected */
+.table-row-cell:selected {
+    -fx-background-color: #c5d5e8;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+/* Align the text in the cells in the center */
+.table-column{
+ -fx-alignment: CENTER;
+}
+
+/* Set the scroll-bars background transparent */
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background,
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: #23272a;
+}
+
+/* Change the color of the scroll-bar thumb */
+.table-view > .virtual-flow > .scroll-bar:horizontal .thumb
+{
+    -fx-background-color: #7289da;
+}
+
+/* Set the arrows of the scrollbar transparent */
+.table-view > .virtual-flow > .scroll-bar > .increment-button,
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}
+
+
