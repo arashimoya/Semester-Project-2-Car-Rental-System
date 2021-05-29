@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 /**
  * ViewModel for adding and editing the branch
- * @author Oliver
+ * @author Oliver, Tymon
  */
 public class AddEditBranchViewModel {
 
@@ -49,6 +49,10 @@ public class AddEditBranchViewModel {
         model.getBranches();
     }
 
+    /**
+     * listens for the branches event change
+     * @param propertyChangeEvent the value of the event change
+     */
     private void listenForBranches(PropertyChangeEvent propertyChangeEvent) {
         Platform.runLater(() -> {
             branches  = (ArrayList<Branch>) propertyChangeEvent.getNewValue();
@@ -82,6 +86,10 @@ public class AddEditBranchViewModel {
         return message;
     }
 
+    /**
+     * verifies the input of the add or edit action
+     * @return whether the input is valid or not
+     */
     private boolean inputVerification() {
         if (name.get() == null || name.get().equals("")) {
             message.setValue("Please input name");

@@ -5,7 +5,7 @@ import server.database.BranchHandler;
 import shared.personel.Employee;
 /**
  * uses lazy instantiation to provide only one instance of each ViewModel
- * @author Dan, Tymon, Oliver
+ * @author Tymon, Oliver
  */
 public class ViewModelFactory {
 

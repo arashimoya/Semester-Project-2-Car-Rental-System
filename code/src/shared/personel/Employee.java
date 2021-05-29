@@ -8,7 +8,7 @@ import shared.Branch.Branch;
 import java.io.Serializable;
 
 /**
- * @author tymon
+ * @author tymon, oliver
  * @version 1.0
  * class representing employee
  * implements Serializable so it can be passed between
@@ -46,10 +46,6 @@ public class Employee implements Serializable {
         this.email = email;
     }
 
-    /**
-     * returns name
-     * @return name
-     */
     public String getName() {
         return name;
     }

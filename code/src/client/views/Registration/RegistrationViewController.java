@@ -11,7 +11,7 @@ import javafx.scene.control.*;
 
 /**
  * The type Registration view controller.
- * @author Dan
+ * @author Tymon, Oliver
  */
 public class RegistrationViewController {
 
@@ -26,9 +26,9 @@ public class RegistrationViewController {
     @FXML
     private TextField usernameTextField;
     @FXML
-    private TextField passwordTextField;
+    private PasswordField passwordTextField;
     @FXML
-    private TextField confirmPasswordTextField;
+    private PasswordField confirmPasswordTextField;
     @FXML
     private Label registrationLabelMessage;
     @FXML
@@ -58,6 +58,7 @@ public class RegistrationViewController {
         roleComboBox.valueProperty().bindBidirectional(registrationViewModel.roleProperty());
         branchComboBox.valueProperty().bindBidirectional(registrationViewModel.branchProperty());
         emailTextField.textProperty().bindBidirectional(registrationViewModel.emailProperty());
+
 
     }
 

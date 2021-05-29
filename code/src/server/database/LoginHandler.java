@@ -10,7 +10,7 @@ import java.security.spec.InvalidKeySpecException;
 
 /**
  * Handles login process and encrypts the password
- * @author Oliver
+ * @author Oliver, Tymon
  */
 public class LoginHandler {
 
@@ -25,7 +25,7 @@ public class LoginHandler {
      * @throws NoSuchAlgorithmException the no such algorithm exception
      * @throws InvalidKeySpecException  the invalid key spec exception
      */
-//creating a new password
+
     public static String hash(String password) throws NoSuchAlgorithmException, InvalidKeySpecException {
 
         String generatedSecuredPasswordHash = generatedStrongPasswordHash(password);

@@ -10,7 +10,7 @@ import javafx.scene.input.KeyCode;
 
 /**
  * The  Login controller.
- * @author adam
+ * @author Tymon, Oliver
  */
 public class LoginController {
 

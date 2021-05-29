@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  * Handles adding and retrieving data about reservations from the database
- * @author tymon
+ * @author Tymon, Oliver
  */
 public class ReservationHandler {
 

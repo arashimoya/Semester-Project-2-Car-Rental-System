@@ -14,7 +14,7 @@ import java.awt.event.ActionEvent;
 
 /**
  * The Add reservation view controller.
- * @author Adam
+ * @author Tymon, Oliver
  */
 public class AddReservationViewController {
 
@@ -98,6 +98,10 @@ public class AddReservationViewController {
         addEditReservationViewModel.addAction();
     }
 
+
+    /**
+     * on calculate press
+     */
     public void calculateAction () {
         addEditReservationViewModel.calculatePrice();
     }

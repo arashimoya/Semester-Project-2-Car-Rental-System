@@ -8,13 +8,12 @@ import javafx.beans.property.StringProperty;
 
 /**
  * ViewModel for displaying home page of the app
- * @author Dan
+ * @author Tymon, Oliver
  */
 public class FrontPageViewModel {
 
     private ViewHandler viewHandler;
     private Model model;
-
     private StringProperty username;
 
     /**
@@ -32,6 +31,10 @@ public class FrontPageViewModel {
 
     public StringProperty usernameProperty() {
         return username;
+    }
+
+    public void refreshUsername () {
+        username.set(Session.getUsername());
     }
 
     /**

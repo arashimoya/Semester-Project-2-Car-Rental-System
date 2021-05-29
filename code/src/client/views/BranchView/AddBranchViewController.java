@@ -8,7 +8,7 @@ import javafx.scene.control.TextField;
 
 /**
  * The Add branch view controller.
- * @author Dan
+ * @author Oliver, Tymon
  */
 public class AddBranchViewController {
 

@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.sql.Date;
 
 /**
- * @author Adam
+ * @author tymon, oliver
  * @version 2.0
  * class representing reservation
  * implements Serializable so it can be passed between

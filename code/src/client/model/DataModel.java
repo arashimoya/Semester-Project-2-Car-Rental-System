@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 /**
  * Class used for passing & retrieving data between ViewModel and Client
+ * @author Tymon, Oliver
  */
 public class DataModel implements Model, PropertyChangeSubject {
 

@@ -20,7 +20,7 @@ import java.util.ResourceBundle;
 
 /**
  * The  Branch view controller.
- * @author Adam
+ * @author Oliver, Tymon
  */
 public class BranchViewController {
     @FXML
@@ -31,29 +31,14 @@ public class BranchViewController {
     private Button deleteButton;
     @FXML
     private Button addButton;
-    /**
-     * The Table view.
-     */
     @FXML
     TableView<Branch> tableView;
-    /**
-     * The Id col.
-     */
     @FXML
     TableColumn<Branch, Number> idCol;
-    /**
-     * The Id name.
-     */
     @FXML
     TableColumn<Branch, String> idName;
-    /**
-     * The Id location.
-     */
     @FXML
     TableColumn<Branch, String> idLocation;
-    /**
-     * The Branch view model.
-     */
     BranchViewModel branchViewModel;
 
     /**

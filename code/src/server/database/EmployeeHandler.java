@@ -14,13 +14,39 @@ import java.util.ArrayList;
 /**
  * Handles adding and retrieving data about employees from the database
  *
- * @author Oliver
+ * @author Oliver, Tymon
  */
 public class EmployeeHandler {
 
     private final Connection connection = DatabaseConnection.getInstance().getConnection();
     private BranchHandler branchHandler = new BranchHandler();
 
+
+
+
+    public void createOwnerAccount (String name, String surname, int role_id, String username, String password, String email) {
+
+        try {
+            Statement statement1 = connection.createStatement();
+            ResultSet result = statement1.executeQuery("SELECT * FROM employee WHERE username = 'owner'");
+            if (!result.next()) {
+            statement1.close();
+            String hashedPassword = LoginHandler.hash(password);
+            Statement statement = connection.createStatement();
+            statement.executeUpdate("INSERT INTO employee (name, surname, role_id, username, password, email) " +
+                    "VALUES ('" + name + "', '" + surname + "', " + role_id + ", '" + username + "', '" +
+                    hashedPassword + "','" + email + "');");
+            statement.close();
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (InvalidKeySpecException e) {
+            e.printStackTrace();
+        }
+
+    }
 
 
     /**

@@ -21,7 +21,7 @@ import java.util.regex.Pattern;
 
 /**
  * ViewModel for adding and editing the car
- * @author Tymon
+ * @author Tymon, Oliver
  */
 public class AddEditCarViewModel {
 
@@ -82,6 +82,10 @@ public class AddEditCarViewModel {
         message = new SimpleStringProperty();
     }
 
+    /**
+     * listens for the car event change
+     * @param propertyChangeEvent the value of the event
+     */
     private void listenForCars(PropertyChangeEvent propertyChangeEvent) {
         Platform.runLater(() -> {
             cars = (ArrayList<Car>) propertyChangeEvent.getNewValue();
@@ -248,6 +252,10 @@ public class AddEditCarViewModel {
     }
 
 
+    /**
+     * verifies the input of the add or edit action
+     * @return whether the input is valid or not
+     */
     private boolean inputVerification () {
 
         String decimalNumbers = "[1-9]\\d*(\\.\\d+)?$";
@@ -420,6 +428,9 @@ public class AddEditCarViewModel {
         message.set("");
     }
 
+    /**
+     * returns to the list, sets all textfields of the input form to default and retrieves new data
+     */
     private void reload () {
         model.getCars();
         viewHandler.openCarView();

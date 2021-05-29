@@ -11,7 +11,7 @@ import shared.Reservation.Car;
 
 /**
  * The Edit car view controller.
- * @author Oliver
+ * @author Oliver, Tymon
  */
 public class EditCarViewController {
 

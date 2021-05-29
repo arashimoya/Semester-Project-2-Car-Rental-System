@@ -20,7 +20,7 @@ import java.io.IOException;
 
 /**
  * The type Reservation view controller.
- * @author Dan
+ * @author Tymon, Oliver
  */
 public class ReservationViewController {
     @FXML

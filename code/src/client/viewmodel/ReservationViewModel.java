@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 /**
  * ViewModel for displaying reservation information
- * @author adam
+ * @author Oliver, Tymon
  */
 public class ReservationViewModel {
     private ObservableList<Reservation> reservations;
@@ -36,6 +36,10 @@ public class ReservationViewModel {
         this.viewHandler = viewHandler;
     }
 
+    /**
+     * listens for the reservation event change
+     * @param propertyChangeEvent the value of the event
+     */
     private void listenForReservations(PropertyChangeEvent propertyChangeEvent) {
         Platform.runLater(() -> {
             reservations.clear();

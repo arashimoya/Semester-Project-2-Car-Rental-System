@@ -8,7 +8,7 @@ import javafx.beans.property.StringProperty;
 import java.io.Serializable;
 
 /**
- * @author tymon
+ * @author tymon, oliver
  * @version 1.0
  * class representing branch
  * client and server

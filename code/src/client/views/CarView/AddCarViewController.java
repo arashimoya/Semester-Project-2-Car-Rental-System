@@ -9,7 +9,7 @@ import javafx.scene.control.TextField;
 
 /**
  * The type Add car view controller.
- * @author Adam
+ * @author Tymon, Oliver
  */
 public class AddCarViewController {
 

@@ -23,7 +23,7 @@ import java.util.ArrayList;
 
 /**
  * ViewModel for displaying branch information
- * @author Dan
+ * @author Tymon, Oliver
  */
 public class BranchViewModel {
     private Model model;
@@ -39,9 +39,13 @@ public class BranchViewModel {
     private ArrayList<Car> cars;
     private ArrayList<Reservation> reservations;
     private ArrayList<Employee> employees;
-
     private StringProperty message;
 
+    /**
+     * the constructor of the class
+     * @param model the datamodel
+     * @param viewHandler the view handler
+     */
     public BranchViewModel(Model model, ViewHandler viewHandler) {
 
         this.model = model;
@@ -69,22 +73,38 @@ public class BranchViewModel {
 
     }
 
+    /**
+     * returns the message string property
+     * @return the message string property
+     */
     public StringProperty messageProperty () {
         return message;
     }
 
+    /**
+     * listens for the reservation event change
+     * @param propertyChangeEvent the event change value
+     */
     private void listenForReservations(PropertyChangeEvent propertyChangeEvent) {
         Platform.runLater(() -> {
             reservations = (ArrayList<Reservation>) propertyChangeEvent.getNewValue();
         });
     }
 
+    /**
+     * listens for the employees event change
+     * @param propertyChangeEvent the event change value
+     */
     private void listenForEmployees(PropertyChangeEvent propertyChangeEvent) {
         Platform.runLater(() -> {
             employees = (ArrayList<Employee>) propertyChangeEvent.getNewValue();
         });
     }
 
+    /**
+     * listens for the cars event change
+     * @param propertyChangeEvent the event change value
+     */
     private void listenForCars(PropertyChangeEvent propertyChangeEvent) {
         Platform.runLater(() -> {
             cars = (ArrayList<Car>) propertyChangeEvent.getNewValue();

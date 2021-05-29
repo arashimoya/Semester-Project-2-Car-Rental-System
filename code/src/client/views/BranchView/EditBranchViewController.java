@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  * The Edit branch view controller.
- * @author Dan
+ * @author Oliver, Tymon
  */
 public class EditBranchViewController {
     private AddEditBranchViewModel addEditBranchViewModel;

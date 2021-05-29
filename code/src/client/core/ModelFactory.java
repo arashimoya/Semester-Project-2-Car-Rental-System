@@ -8,7 +8,7 @@ import java.rmi.RemoteException;
 
 /**
  * uses lazy instantiation to provide only one instance of client
- * @author Dan
+ * @author Tymon, Oliver
  */
 public class ModelFactory
 {

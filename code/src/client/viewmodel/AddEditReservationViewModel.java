@@ -24,7 +24,7 @@ import java.util.regex.Pattern;
 
 /**
  * ViewModel for adding and editing the reservation
- * @author adam
+ * @author Tymon, Oliver
  */
 public class AddEditReservationViewModel {
     private Model model;
@@ -95,16 +95,19 @@ public class AddEditReservationViewModel {
     }
 
     /**
-     * Name property string property.
-     *
-     * @return the string property
+     * listens for the reservation event change
+     * @param propertyChangeEvent the value of the event change
      */
     private void listenForReservations(PropertyChangeEvent propertyChangeEvent) {
         Platform.runLater(() -> {
             reservations = (ArrayList<Reservation>) propertyChangeEvent.getNewValue();
         });
     }
-
+    /**
+     * Name property string property.
+     *
+     * @return the string property
+     */
     public StringProperty nameProperty () {
         return name;
     }
@@ -244,6 +247,10 @@ public class AddEditReservationViewModel {
         return message;
     }
 
+    /**
+     * listens for the branches event change
+     * @param propertyChangeEvent the event change value
+     */
     private void listenForBranches(PropertyChangeEvent propertyChangeEvent) {
         Platform.runLater(() -> {
             branches.clear();
@@ -258,12 +265,16 @@ public class AddEditReservationViewModel {
         });
     }
 
+    /**
+     * listens for the car event change
+     * @param propertyChangeEvent the event change value
+     */
     private void listenForCars(PropertyChangeEvent propertyChangeEvent) {
         Platform.runLater(() -> {
 
             cars.clear();
 
-            ArrayList<Car> receivedCars = (ArrayList<Car>) propertyChangeEvent.getNewValue();
+            receivedCars = (ArrayList<Car>) propertyChangeEvent.getNewValue();
             ArrayList<String> receivedCarNumbers = new ArrayList<>();
             for (Car receivedCar : receivedCars) {
                 receivedCarNumbers.add(String.valueOf(receivedCar.getId()));
@@ -290,23 +301,34 @@ public class AddEditReservationViewModel {
         return branches;
     }
 
+    /**
+     * calculates the price of the reservation based on the selected dates and the selected car
+     */
     public void calculatePrice () {
 
         if (startDate.get() != null && endDate.get() != null && car != null ) {
+
+
+
             model.getCars();
             double carPrice = 0;
             int duration = endDate.get().getDayOfYear() - startDate.get().getDayOfYear();
             for (Car receivedCar : receivedCars) {
+
                 if (receivedCar.getId() == Integer.parseInt(car.get())) {
                     carPrice = receivedCar.getDailyPrice();
                 }
             }
             price.set(String.valueOf(carPrice * duration));
         } else {
-            message.set("Please input start date, end date and the car to get a calculation");
+            message.set("Input start, end date, car to get a calculation");
         }
     }
 
+    /**
+     * verifies the input of the add or edit action
+     * @return if its correct or not
+     */
     private boolean inputVerification() {
 
 
@@ -471,7 +493,7 @@ public class AddEditReservationViewModel {
     }
 
     /**
-     * Edit action.
+     * defaults the fields of the add and edit form
      *
      *
      */
@@ -494,12 +516,19 @@ public class AddEditReservationViewModel {
         car.set("");
     }
 
+    /**
+     * goes back to the list view, defaults are fields and reloads data
+     */
     private void reload () {
         model.getReservations();
         viewHandler.openReservationView();
         defaultFields();
     }
 
+    /**
+     * edit action
+     * @param id the reservation to be edited
+     */
     public void editAction (int id) {
         if (inputVerification()){
 
@@ -525,11 +554,19 @@ public class AddEditReservationViewModel {
         }
     }
 
+    /**
+     * returns the sql date object from the start date local date object
+     * @return the sql date
+     */
     private Date getSQLDateFromStartDate () {
         java.sql.Date date = Date.valueOf(startDate.getValue());
         return date;
     }
 
+    /**
+     * returns the sql date object from the end date local date object
+     * @return the sql date
+     */
     private Date getSQLDateFromEndDate () {
         java.sql.Date date = Date.valueOf(endDate.getValue());
         return date;

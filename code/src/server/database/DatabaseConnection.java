@@ -9,7 +9,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Singleton for getting database connection
- * @author Tymon
+ * @author Tymon, Oliver
  */
 public class DatabaseConnection {
     private static DatabaseConnection instance;

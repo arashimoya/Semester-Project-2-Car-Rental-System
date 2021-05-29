@@ -11,6 +11,11 @@ import java.sql.Array;
 import java.sql.Date;
 import java.util.ArrayList;
 
+/**
+ * interface used for dataclient
+ * @author Tymon, Oliver
+ */
+
 public interface Client extends Remote {
 
     void startClient() throws RemoteException, NotBoundException;

@@ -14,7 +14,7 @@ import shared.Reservation.Reservation;
 
 /**
  * The Edit reservation view controller.
- * @author Adam
+ * @author Tymon, Oliver
  */
 public class EditReservationViewController {
 
@@ -116,6 +116,9 @@ public class EditReservationViewController {
         addEditReservationViewModel.editAction(Integer.parseInt(idText.getText()));
     }
 
+    /**
+     * on calculate press
+     */
     public void calculateAction () {
         addEditReservationViewModel.calculatePrice();
     }

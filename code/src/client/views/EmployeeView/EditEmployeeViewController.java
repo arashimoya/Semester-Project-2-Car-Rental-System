@@ -13,7 +13,7 @@ import shared.personel.Employee;
 
 /**
  * The Edit employee view controller.
- * @author Oliver
+ * @author Oliver, Tymon
  */
 public class EditEmployeeViewController {
 
@@ -28,9 +28,9 @@ public class EditEmployeeViewController {
     @FXML
     private TextField usernameTextField;
     @FXML
-    private TextField passwordTextField;
+    private PasswordField passwordTextField;
     @FXML
-    private TextField confirmPasswordTextField;
+    private PasswordField confirmPasswordTextField;
     @FXML
     private Label registrationLabelMessage;
     @FXML

@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 /**
  * ViewModel for displaying car information
- * @author adam
+ * @author Tymon, Oliver
  */
 public class CarViewModel {
 
@@ -43,10 +43,18 @@ public class CarViewModel {
         model.getCars();
     }
 
+    /**
+     * Gets the message string property
+     * @return the message string property
+     */
     public StringProperty messageProperty () {
         return message;
     }
 
+    /**
+     * listens for the reservation event change
+     * @param propertyChangeEvent the value of the event change
+     */
     private void listenForReservations(PropertyChangeEvent propertyChangeEvent) {
         Platform.runLater(() -> {
             reservations = (ArrayList<Reservation>) propertyChangeEvent.getNewValue();

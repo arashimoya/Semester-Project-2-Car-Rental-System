@@ -4,7 +4,7 @@ package shared.Reservation;
 import java.io.Serializable;
 
 /**
- * @author Oliver
+ * @author Oliver, tymon
  * @version 1.0
  * class to store address from Reservation class,
  * implements Serializable so it can be passed between

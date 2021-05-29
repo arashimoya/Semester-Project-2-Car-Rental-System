@@ -12,7 +12,7 @@ import shared.personel.Employee;
 
 /**
  * The Employee view controller.
- * @author Adam
+ * @author Tymon, Oliver
  */
 public class EmployeeViewController {
 

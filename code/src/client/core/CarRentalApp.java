@@ -6,7 +6,7 @@ import javafx.stage.Stage;
 /**
  * Initialises client factory, model factory and viewHandler
  * opens the first scene
- * @author Dan
+ * @author Tymon, Oliver
  */
 public class CarRentalApp extends Application {
     @Override

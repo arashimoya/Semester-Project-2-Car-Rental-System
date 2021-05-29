@@ -21,7 +21,7 @@ import java.util.ArrayList;
  * Class used for passing & retrieving data between Model and Server
  * Client establishes connection to server
  *
- * @author Tymon
+ * @author Tymon, Oliver
  */
 public class DataClient implements Client, PropertyChangeSubject {
 
@@ -446,6 +446,10 @@ public class DataClient implements Client, PropertyChangeSubject {
         support.firePropertyChange("cars", null, cars);
     }
 
+    /**
+     * Retrieves employees
+     * @throws RemoteException if cannot establish collection
+     */
     @Override
     public void getEmployees() throws RemoteException {
         server.getEmployees(this);

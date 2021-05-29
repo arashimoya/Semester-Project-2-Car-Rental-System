@@ -34,7 +34,7 @@ import java.io.IOException;
 /**
  * Class responsible for switching the scenes and loading init methods in the constructors
  *
- * @author Dan, Tymon, Oliver, Adam
+ * @author Oliver, Tymon
  */
 public class ViewHandler {
 

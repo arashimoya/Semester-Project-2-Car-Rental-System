@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  * Handles adding and retrieving data about branches from the database
- * @author Oliver
+ * @author Oliver, Tymon
  */
 public class BranchHandler {
 

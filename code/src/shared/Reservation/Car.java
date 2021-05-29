@@ -5,7 +5,7 @@ import javafx.beans.property.*;
 import java.io.Serializable;
 
 /**
- * @author Oliver
+ * @author Oliver, tymon
  * @version 1.0
  * stores Car information that are used in Reservation class
  * implements Serializable so it can be passed between

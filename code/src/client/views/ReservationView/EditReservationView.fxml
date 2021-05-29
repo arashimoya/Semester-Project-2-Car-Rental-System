@@ -137,7 +137,7 @@
             <Font size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="phoneNumberTextField" layoutX="221.0" layoutY="643.0" prefHeight="30.0" prefWidth="187.0">
+      <TextField fx:id="priceTextField" layoutX="221.0" layoutY="643.0" prefHeight="30.0" prefWidth="187.0">
          <font>
             <Font size="14.0" />
          </font>
@@ -167,7 +167,7 @@
             <Font size="14.0" />
          </font>
       </Text>
-      <TextField fx:id="priceTextField" layoutX="221.0" layoutY="716.0" prefHeight="30.0" prefWidth="187.0">
+      <TextField fx:id="phoneNumberTextField" layoutX="221.0" layoutY="716.0" prefHeight="30.0" prefWidth="187.0">
          <font>
             <Font size="14.0" />
          </font>

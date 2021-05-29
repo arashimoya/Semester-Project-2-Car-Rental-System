@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  * ViewModel for displaying employee information
- * @author adam
+ * @author Tymon, Oliver
  */
 public class EmployeeViewModel {
     private final ViewHandler viewHandler;

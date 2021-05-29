@@ -1,5 +1,6 @@
 package server.RMIServer;
 
+import server.database.EmployeeHandler;
 import shared.Branch.Branch;
 import shared.personel.Employee;
 
@@ -10,7 +11,7 @@ import java.rmi.registry.Registry;
 
 /**
  * Class for Running the server
- * @author tymon
+ * @author Tymon, Oliver
  */
 public class RunServer {
     /**
@@ -25,8 +26,8 @@ public class RunServer {
         Registry registry = LocateRegistry.createRegistry(1099);
         registry.bind("server", server);
 
-        Branch branch = new Branch(0, "owner", "city");
-        Employee employee = new Employee(1, "David", "Wallace", 1, 0, "boss", "boss123", "adsdas@gmail.com");
+        EmployeeHandler employeeHandler = new EmployeeHandler();
+        employeeHandler.createOwnerAccount("owner", "owner", 1, "owner", "Toda@2115", "owner@gmail.com");
 
     }
 }

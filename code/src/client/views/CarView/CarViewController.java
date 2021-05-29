@@ -13,7 +13,7 @@ import java.awt.event.ActionEvent;
 
 /**
  * The type Car view controller.
- * @author Oliver
+ * @author Oliver, Tymon
  */
 public class CarViewController {
 

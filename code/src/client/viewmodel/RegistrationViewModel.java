@@ -21,7 +21,7 @@ import java.util.regex.Pattern;
 /**
  * ViewModel for registration of new employee, only accesible by manager and owner
  *
- * @author Dan
+ * @author Oliver, Tymon
  */
 public class RegistrationViewModel {
 
@@ -66,27 +66,26 @@ public class RegistrationViewModel {
         model.addListener(this::listenForEmployees, "employees");
         model.getEmployees();
 
-
-        if (Session.getRole_id() == 1) {
-            roles.add("2");
-            roles.add("3");
-        }
-
-        if (Session.getRole_id() == 2) {
-            roles.add("3");
-        }
-
         model.addListener(this::listenForBranches, "branches");
         model.getBranches();
 
     }
 
+
+    /**
+     * listens for the employees event change
+     * @param propertyChangeEvent the value of the event change
+     */
     private void listenForEmployees(PropertyChangeEvent propertyChangeEvent) {
         Platform.runLater(() -> {
             employees = (ArrayList<Employee>) propertyChangeEvent.getNewValue();
         });
     }
 
+    /**
+     * listens for the branches event change
+     * @param propertyChangeEvent the value of the event
+     */
     private void listenForBranches(PropertyChangeEvent propertyChangeEvent) {
         Platform.runLater(() -> {
             branches.clear();
@@ -116,6 +115,15 @@ public class RegistrationViewModel {
      * @return the roles
      */
     public ObservableList<String> getRoles() {
+        roles.clear();
+
+        if (Session.getRole_id() == 1){
+            roles.add("2");
+            roles.add("3");
+        }
+        else{
+            roles.add("3");
+        }
         return roles;
     }
 
@@ -126,7 +134,22 @@ public class RegistrationViewModel {
         reload();
     }
 
+    /**
+     * verifies the input of the add or edit action
+     * @return whether the input is valid or not
+     */
     private boolean inputVerification() {
+
+        model.getEmployees();
+        boolean uniqueUsername = true;
+
+
+        for (Employee employee : employees) {
+            if (employee.usernameProperty().get().equals(username.get())) {
+                uniqueUsername = false;
+            }
+        }
+
         String specialCharacters = "[^\\w]";
         Pattern regexSpecial = Pattern.compile(specialCharacters);
         Matcher matcherSpecial = regexSpecial.matcher(password.get());
@@ -196,7 +219,11 @@ public class RegistrationViewModel {
         } else if (branch.get() == null || branch.get().equals("")) {
             registrationMessageLabel.set("Please select a branch");
             return false;
-        } else {
+        } else if (uniqueUsername == false) {
+            registrationMessageLabel.set("Please input a unique username");
+            return false;
+        }
+            else {
             for (Employee employee : employees) {
                 if (employee.getName().equals(firstname.get()) && employee.getSurname().equals(lastname.get()) && String.valueOf(employee.getBranchId()).equals(branch.get()) && employee.getEmail().equals(email.get())
                         && String.valueOf(employee.getRoleId()).equals(role.get())) {
@@ -245,12 +272,19 @@ public class RegistrationViewModel {
     }
 
 
+    /**
+     * goes back to the list, retrieves new data and sets all textfields to default
+     */
     private void reload() {
         model.getEmployees();
         viewHandler.openEmployeeView();
         defaultFields();
     }
 
+    /**
+     * the edit action
+     * @param id
+     */
     public void onEdit(int id) {
         if (inputVerification()) {
             model.editEmployee(

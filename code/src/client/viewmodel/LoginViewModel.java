@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 /**
  * ViewModel for logging in
+ * @author Tymon, Oliver
  */
 public class LoginViewModel {
 

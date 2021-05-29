@@ -10,6 +10,12 @@ import java.beans.PropertyChangeSupport;
 import java.sql.Date;
 import java.util.ArrayList;
 
+
+/**
+ * Interface used for datamodel
+ * @author Tymon, Oliver
+ */
+
 public interface Model extends PropertyChangeSubject {
 
 
@@ -205,12 +211,28 @@ public interface Model extends PropertyChangeSubject {
      */
     void receiveLogin(PropertyChangeEvent event);
 
+    /**
+     * Retrieves a branch
+     * @param id the id of the branch to be retrieved
+     */
     void getBranch(int id);
 
+    /**
+     * Retrieves a car
+     * @param id the id of the car to be retrieved
+     */
     void getCar(int id);
 
+    /**
+     * Retrieves an employee
+     * @param id the id of the employee to be retrieved
+     */
     void getEmployee(int id);
 
+    /**
+     * Retrieves a reservation
+     * @param id the id of the reservation to be retrieved
+     */
     void getReservation(int id);
 
     /**
@@ -232,6 +254,11 @@ public interface Model extends PropertyChangeSubject {
      * Calls getEmployees on client, gets all employees
      */
     void getEmployees();
+
+    /**
+     * Registers a new employee
+     * @param employee the employee to be registered
+     */
 
     void register(Employee employee);
 

@@ -2,6 +2,7 @@ package client;
 
 /**
  * The type Session to receive employee role.
+ * @author Tymon, Oliver
  */
 public class Session {
 

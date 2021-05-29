@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  * Handles adding and retrieving data about cars from the database
- * @author Tymon
+ * @author Tymon, Oliver
  */
 public class CarHandler {
 

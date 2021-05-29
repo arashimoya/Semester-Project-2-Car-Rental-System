@@ -9,7 +9,7 @@ import javafx.scene.control.Label;
 
 /**
  * The Front page view controller.
- * @author adam
+ * @author Tymon, Oliver
  */
 public class FrontPageViewController {
 
@@ -32,6 +32,7 @@ public class FrontPageViewController {
      */
     public void init(FrontPageViewModel frontPageViewModel) {
         this.frontPageViewModel = frontPageViewModel;
+        frontPageViewModel.refreshUsername();
         usernameLabel.textProperty().bindBidirectional(frontPageViewModel.usernameProperty());
         // Owner ID = 1, Manager ID = 2, Employee ID = 3
         if (Session.getRole_id() == 3) {
