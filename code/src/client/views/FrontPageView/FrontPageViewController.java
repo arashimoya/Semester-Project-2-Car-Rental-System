@@ -37,8 +37,6 @@ public class FrontPageViewController {
         // Owner ID = 1, Manager ID = 2, Employee ID = 3
         if (Session.getRole_id() == 3) {
             openBranchesButton.setVisible(false);
-            openEmployeeButton.setVisible(false);
-            openCarsButton.setVisible(false);
         } else if (Session.getRole_id() == 2) {
             openBranchesButton.setVisible(false);
         }

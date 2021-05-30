@@ -1,5 +1,6 @@
 package client.views.CarView;
 
+import client.Session;
 import client.viewmodel.CarViewModel;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -13,6 +14,7 @@ import java.awt.event.ActionEvent;
 
 /**
  * The type Car view controller.
+ *
  * @author Oliver, Tymon
  */
 public class CarViewController {
@@ -79,6 +81,12 @@ public class CarViewController {
      */
     public void init(CarViewModel carViewModel) {
 
+        // Owner ID = 1, Manager ID = 2, Employee ID = 3
+        if (Session.getRole_id() == 3) {
+            addButton.setVisible(false);
+            removeButton.setVisible(false);
+            editButton.setVisible(false);
+        }
         this.carViewModel = carViewModel;
         column_branch.setCellValueFactory(cellData -> (cellData.getValue().branchIdProperty()));
         column_dailyprice.setCellValueFactory(cellData -> (cellData.getValue().dailyPriceProperty()));
@@ -101,9 +109,9 @@ public class CarViewController {
     /**
      * Delete action.
      */
-    public void deleteAction () {
-        if(tableview_car.getSelectionModel().getSelectedItems().get(0) != null)
-        carViewModel.deleteAction(tableview_car.getSelectionModel().getSelectedItems().get(0).getId());
+    public void deleteAction() {
+        if (tableview_car.getSelectionModel().getSelectedItems().get(0) != null)
+            carViewModel.deleteAction(tableview_car.getSelectionModel().getSelectedItems().get(0).getId());
     }
 
     /**

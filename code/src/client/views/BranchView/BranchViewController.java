@@ -1,5 +1,6 @@
 package client.views.BranchView;
 
+import client.Session;
 import client.viewmodel.BranchViewModel;
 import client.viewmodel.ReservationViewModel;
 import javafx.application.Platform;
@@ -20,6 +21,7 @@ import java.util.ResourceBundle;
 
 /**
  * The  Branch view controller.
+ *
  * @author Oliver, Tymon
  */
 public class BranchViewController {
@@ -47,6 +49,12 @@ public class BranchViewController {
      * @param branchViewModel the branch view model
      */
     public void init(BranchViewModel branchViewModel) {
+        // Owner ID = 1, Manager ID = 2, Employee ID = 3
+        if (Session.getRole_id() == 3) {
+            addButton.setVisible(false);
+            editButton.setVisible(false);
+            deleteButton.setVisible(false);
+        }
         this.branchViewModel = branchViewModel;
         tableView.getItems().clear();
         idName.setCellValueFactory(cellData -> (cellData.getValue().nameProperty()));
@@ -69,7 +77,7 @@ public class BranchViewController {
     /**
      * Delete action.
      */
-    public void deleteAction () {
+    public void deleteAction() {
         if (tableView.getSelectionModel().getSelectedItems().get(0) != null) {
             branchViewModel.deleteAction(tableView.getSelectionModel().getSelectedItems().get(0).getId());
         }
